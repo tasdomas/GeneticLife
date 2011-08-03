@@ -1,0 +1,14 @@
+*** TODO
+ - [ ] Conway's game of life implementation
+   - [ ] benchmark script
+   - [ ] integrate a unit test framework
+   - [ ] ??? parallel evolution
+   - [ ] visualize life
+ - [ ] Genetics
+   - [ ] genetic algorithm framework
+
+*** The Idea
+
+A simple experiment in genetic algorithms - evolve a genetic life form (a configuration of cells smaller than the whole world) that will move furthest
+in N interations. Basically we init the map with only the life form at its center. And after the iterations have passed, check to find live cells.
+The distance from a live cell to the center of the map is calculated and used as a health function.
