@@ -12,3 +12,10 @@
 A simple experiment in genetic algorithms - evolve a genetic life form (a configuration of cells smaller than the whole world) that will move furthest
 in N interations. Basically we init the map with only the life form at its center. And after the iterations have passed, check to find live cells.
 The distance from a live cell to the center of the map is calculated and used as a health function.
+*** Graphics
+gdk_bitmap_create_from_data has been deprecated since version 2.22 and should not be used in newly-written code. You can create a
+Cairo image surface using cairo_image_surface_create_for_data() instead. Specify CAIRO_FORMAT_A1 as the format to get a bitmap. Keep
+in mind that Cairo images must have a rowstride of 4 bytes, so you will need to align your data properly. If you must use a pixmap,
+use gdk_pixmap_new() with a depth of 1 to create a bitmap and then use gdk_cairo_create(), cairo_set_source_surface() and cairo_paint()
+to draw the image surface to the bitmap.
+
